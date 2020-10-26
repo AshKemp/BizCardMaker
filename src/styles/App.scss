@@ -1,3 +1,9 @@
 .App {
     @import "Header";
 }
+
+main {
+    display: flex;
+    @import "Form";
+    @import "Preview";
+}
