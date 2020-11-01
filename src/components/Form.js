@@ -6,7 +6,7 @@ const Form = ({ onChange, Values }) => {
     <section className="Form">
       <h2>Enter your details</h2>
       <form onChange={onChange}>
-        {["Name", "Designation", "Phone", "Email"].map((field, key) => (
+        {Object.keys(Values).map((field, key) => (
           <FormElement
             ID={field}
             Label={field}
