@@ -1,13 +1,18 @@
 import React from "react";
 import FormElement from "./FormElement";
 
-const Form = () => {
+const Form = ({ onChange, Values }) => {
   return (
     <section className="Form">
       <h2>Enter your details</h2>
-      <form>
+      <form onChange={onChange}>
         {["Name", "Designation", "Phone", "Email"].map((field, key) => (
-          <FormElement ID={field} Label={field} key={key} />
+          <FormElement
+            ID={field}
+            Label={field}
+            key={key}
+            Value={Values[field]}
+          />
         ))}
       </form>
     </section>
