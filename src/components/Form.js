@@ -15,6 +15,7 @@ const Form = ({ onChange, Values }) => {
           />
         ))}
       </form>
+      {/* <pre>{JSON.stringify(Values, null, 2)}</pre> */}
     </section>
   );
 };

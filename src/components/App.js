@@ -4,10 +4,10 @@ import Form from "./Form";
 import Preview from "./Preview";
 
 const App = () => {
-  const [Name, setName] = useState("Name");
-  const [Designation, setDesignation] = useState("Designation");
-  const [Phone, setPhone] = useState("Phone");
-  const [Email, setEmail] = useState("Email");
+  const [Name, setName] = useState("");
+  const [Designation, setDesignation] = useState("");
+  const [Phone, setPhone] = useState("");
+  const [Email, setEmail] = useState("");
 
   const Values = {
     Name,
@@ -15,11 +15,21 @@ const App = () => {
     Phone,
     Email,
   };
+
+  const handleChange = (e) => {
+    const setField = {
+      setName,
+      setDesignation,
+      setPhone,
+      setEmail,
+    };
+    setField["set" + e.target.name](e.target.value);
+  };
   return (
     <div className="App">
       <Header Dark={true}>Professional Card Maker</Header>
       <main>
-        <Form Values={Values} />
+        <Form Values={Values} onChange={handleChange} />
         <Preview />
       </main>
     </div>
