@@ -12,6 +12,14 @@ pre {
 }
 
 main {
+    h2 {
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ccf;
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
     display: flex;
     @import "Form";
     @import "Preview";
